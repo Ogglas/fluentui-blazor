@@ -20,6 +20,7 @@
                required="@Required"
                appearance="@Appearance.ToAttributeValue()"
                @onchange="@(EventCallback.Factory.CreateBinder<string?>(this, __value => CurrentValueAsString = __value, CurrentValueAsString))"
+               @oninput=@OnInput
                @attributes="AdditionalAttributes">
     @ChildContent
 </fluent-search>

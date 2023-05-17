@@ -85,6 +85,12 @@ public abstract class FluentInputBase<TValue> : FluentComponentBase, IDisposable
     public string? DisplayName { get; set; }
     
     /// <summary>
+    /// Handle oninput event
+    /// </summary>
+    [Parameter]
+    public EventCallback<ChangeEventArgs> OnInput { get; set; }
+    
+    /// <summary>
     /// Gets the associated <see cref="AspNetCore.Components.Forms.EditContext"/>.
     /// This property is uninitialized if the input does not have a parent <see cref="EditForm"/>.
     /// </summary>
